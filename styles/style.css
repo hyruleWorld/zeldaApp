@@ -26,7 +26,8 @@ figure {
 }
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -139,7 +140,8 @@ fieldset {
 }
 
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -157,7 +159,8 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
 }
 
@@ -200,6 +203,7 @@ template {
 }
 
 * {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -272,6 +276,7 @@ input {
 a {
   text-decoration: none;
   cursor: pointer;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 a:hover {
@@ -286,6 +291,7 @@ button {
   background-color: #1D5F66;
   border: none;
   padding: 10px 20px;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
   border-radius: 20px;
@@ -298,11 +304,19 @@ button:focus {
 }
 
 header .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
-  flex-wrap: wrap;
-  flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .headingContainer {
@@ -317,7 +331,60 @@ button {
 }
 
 .question .flexContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+.question .flexContainer .formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 20px;
+}
+.question .flexContainer .formContainer form {
+  width: 70%;
+  margin-bottom: 1.5rem;
+}
+.question .flexContainer .formContainer form fieldset {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #EFC645;
+  border: none;
+  border-radius: 45px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+.question .flexContainer .formContainer form fieldset #creatureQuestion {
+  width: 80%;
+  text-align: center;
+  border-radius: 30px;
+  border: 2px solid #FFF;
+  padding: 10px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(../assets/korok.gif) no-repeat;
+  background-size: 3.7rem;
+  background-position: 96% center;
+  padding: 3%;
+  color: #0B8142;
+}
+.question .flexContainer .formContainer form fieldset #creatureQuestion:hover, .question .flexContainer .formContainer form fieldset #creatureQuestion:focus {
+  border: 2px solid #0B8142;
 }
 
 footer p {

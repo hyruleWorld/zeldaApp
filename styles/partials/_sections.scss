@@ -1,5 +1,63 @@
 @use "variables" as *;
 
+// .question section
 .question .flexContainer {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  .formContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+
+    form {
+      width: 70%;
+      margin-bottom: 1.5rem;
+
+
+      fieldset {
+        display: flex;
+        background-color: $quinary;
+        border: none;
+        border-radius: 45px;
+        justify-content: center;
+        padding: 20px;
+
+        #creatureQuestion {
+          width: 80%;
+          text-align: center;
+          border-radius: 30px;
+          border: 2px solid $white;
+          padding: 10px;
+          appearance: none;
+          background: url(../assets/korok.gif) no-repeat;
+          background-size: 3.7rem;
+          background-position: 96% center;
+          padding: 3%;
+          color: $primary;
+
+
+          &:hover,
+          &:focus {
+            border: 2px solid $primary;
+
+          }
+
+
+
+
+
+
+
+        }
+
+      }
+
+    }
+
+  }
+
+
 }
