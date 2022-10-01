@@ -42,15 +42,24 @@ zeldaApp.getInfo=()=>{
         // .push the food and non_food array in the combine array
         // random generate a value from the answer from the array
         // then alert "select a preference"
-// 2: CREATE A NEW
+// 2: CREATE A NEW OBJECT
+        // creat a new empty obj named newObj
+        // grab the content in the food & non_food arraies
+        // loop through newObj
+        // random generate a value from the answer from the newObj
         
-        
+    
         // else user selects a submit value as an empty value "pick you preference" because an answer is required
 
 //When users finish the question, click a button “Show me” then display answer section
 
-// Display  card with:
-// Img
+    // event listener for the show me button
+    // match selected value with object data's key name(food & non_food &combination of foor & non_food)
+    // loop through food, non_food and the combination 
+    // create 3 <p> tags inside cardContentContainer(ul>li>p) with seperate class name: name, common_location and description;  and 1 <img> tag inside imgContainer with class name of image
+
+// Display card with:
+// Img: append a randomly generated image
 // Name
 // Location 
 // description  
