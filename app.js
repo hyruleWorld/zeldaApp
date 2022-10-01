@@ -22,9 +22,30 @@ zeldaApp.getInfo=()=>{
 }
 
 
-//Change visibility of question and answer sections-display:none
+//Change style visibility of question and answer sections-display:none
 
-//Click a button “Start Game” to display qustion section
+
+//Click a button “Start Game” to display question section
+    // event listener for the submitted value that has been selected in drop down menu (option)
+        // create variable for selected value
+        // create variable method for random generator Math.floor(Math.random( value * value.length))
+        // add in prevent default of default event on clicking "Show me" button
+        // if user selects "food"
+        // then random generate from food array (36 items) = food.length
+        // if user selects "non food"
+        //  then random generate from non_food array (47 items) = non_food.length
+        // if user selects "whatever"
+        // then random generate from food or non-food array (36 index + 47 index) = combined.length
+//OPTIONS 
+// 1: ARRAY METHOD
+        // create an combine array variable
+        // .push the food and non_food array in the combine array
+        // random generate a value from the answer from the array
+        // then alert "select a preference"
+// 2: CREATE A NEW
+        
+        
+        // else user selects a submit value as an empty value "pick you preference" because an answer is required
 
 //When users finish the question, click a button “Show me” then display answer section
 
