@@ -1,0 +1,56 @@
+@use "variables" as *;
+
+.wrapper {
+  max-width: 1260px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+// a {
+//   text-decoration: none;
+// }
+
+// button {
+
+// }
+
+// a {
+//   font-family: $fontLato;
+//   font-weight: bold;
+//   font-size: $baseFontSize;
+//   text-align: center;
+//   line-height: 1.45rem;
+//   letter-spacing: 0.05rem;
+//   color: $secondary;
+//   text-transform: uppercase;
+//   cursor: pointer;
+
+//   &:hover {
+//     color: $primary;
+//   }
+// }
+
+// .button {
+//   font-family: $fontPlayfair;
+//   font-weight: 900;
+//   font-style: italic;
+//   font-size: $baseFontSize;
+//   text-align: center;
+//   line-height: 1.6rem;
+//   letter-spacing: 0.05rem;
+//   background-color: $tertiary;
+//   color: $secondary;
+//   border: 2px solid $tertiary;
+//   padding: 15px 25px;
+//   cursor: pointer;
+//   transition: 0.3s;
+
+//   &:hover {
+//     background-color: $primary;
+//     color: $tertiary;
+//   }
+
+//   &:focus {
+//     background-color: $primary;
+//     color: $tertiary;
+//   }

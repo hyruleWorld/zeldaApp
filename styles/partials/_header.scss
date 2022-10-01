@@ -1,0 +1,20 @@
+@use "variables" as *;
+
+header .flexContainer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.headingContainer {
+  padding: 5rem 0;
+}
+
+h1,
+h2,
+h3,
+button {
+  margin-bottom: 4rem;
+}
