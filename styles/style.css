@@ -26,8 +26,7 @@ figure {
 }
 
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   height: 0;
   overflow: visible;
 }
@@ -140,8 +139,7 @@ fieldset {
 }
 
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   color: inherit;
   display: table;
   max-width: 100%;
@@ -159,8 +157,7 @@ textarea {
 }
 
 [type=checkbox], [type=radio] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0;
 }
 
@@ -203,7 +200,6 @@ template {
 }
 
 * {
-  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -273,10 +269,13 @@ input {
   margin: 0;
 }
 
+ul {
+  list-style: none;
+}
+
 a {
   text-decoration: none;
   cursor: pointer;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 a:hover {
@@ -291,7 +290,6 @@ button {
   background-color: #1D5F66;
   border: none;
   padding: 10px 20px;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
   border-radius: 20px;
@@ -304,19 +302,11 @@ button:focus {
 }
 
 header .flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   text-align: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .headingContainer {
@@ -331,25 +321,14 @@ button {
 }
 
 .question .flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 .question .flexContainer .formContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   margin-bottom: 20px;
 }
 .question .flexContainer .formContainer form {
@@ -357,15 +336,11 @@ button {
   margin-bottom: 1.5rem;
 }
 .question .flexContainer .formContainer form fieldset {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #EFC645;
   border: none;
   border-radius: 45px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 20px;
 }
 .question .flexContainer .formContainer form fieldset #creatureQuestion {
@@ -385,6 +360,35 @@ button {
 }
 .question .flexContainer .formContainer form fieldset #creatureQuestion:hover, .question .flexContainer .formContainer form fieldset #creatureQuestion:focus {
   border: 2px solid #0B8142;
+}
+
+.answer .flexContainer {
+  display: flex;
+  background-color: #F9E8A2;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.answer .flexContainer h2 {
+  margin: 2rem 1rem 1rem 1rem;
+}
+
+.answer .cardContainer {
+  background-color: #3CB8C6;
+  margin: 0 auto;
+}
+.answer .cardContainer .imgContainer {
+  overflow: hidden;
+  padding: 1rem;
+  max-width: 100vw;
+}
+.answer .cardContainer .imgContainer .img {
+  width: 100%;
+}
+.answer .cardContainer .cardContentContainer {
+  background-color: #1D5F66;
+  padding: 2rem;
+  text-align: center;
 }
 
 footer p {
