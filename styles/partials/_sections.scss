@@ -1,15 +1,22 @@
 @use "variables" as *;
 
-// .question section
+//question section
+.question{
+  display:none;
+} //hide question section when page loads 
+
+
 .question .flexContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  //new change:
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
   text-align: center;
 
   .formContainer {
     display: flex;
     justify-content: center;
+   
     margin-bottom: 20px;
 
     form {
@@ -18,11 +25,15 @@
 
 
       fieldset {
-        display: flex;
+        display: flex;  
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+  
         background-color: $quinary;
         border: none;
         border-radius: 45px;
-        justify-content: center;
+       
         padding: 20px;
 
         #creatureQuestion {
@@ -37,6 +48,8 @@
           // background-position: 99% center;
           padding: 3%;
           color: $primary;
+          margin-bottom: 1rem;
+          
 
 
           &:hover,
@@ -56,7 +69,14 @@
 }
 
 
+
 // .answer section styles
+
+.answer{
+  display:none;
+}   //hide answer section when page loads 
+
+
 
 .answer .flexContainer {
   display: flex;

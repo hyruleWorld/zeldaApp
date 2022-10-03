@@ -19,7 +19,7 @@
                 <h1>Welcome to Hyrule!</h1>
                 <h3>Find out what creature you are</h3>
                 <div class="buttonContainer">
-                    <button>Start Game</button>
+                    <button class="startGame">Start Game</button>
                 </div> <!-- buttonContainer end -->
             </div> <!-- headingContainer end -->
         </div> <!-- flexContainer wrapper end -->
@@ -34,49 +34,51 @@
                     <fieldset>
                         <label for="creatureQuestion" class="sr-only">Pick your preference</label>
                         <select name="creatureQuestion" id="creatureQuestion">
-                            <option value="title" selected>Pick your preference</option>
+                            <option value="title" selected disabled="disabled">Pick your preference</option>
                             <option value="food">Food</option>
                             <option value="nonFood">NonFood</option>
                             <option value="whatever">Whatever</option>
                         </select>
+                        
+
+                        <button class="showMe">Show me</button>
+
                     </fieldset>
                 </form>
             </div>
-            <div class="buttonContainer">
-                <button>Show me</button>
-            </div>
+
         </div> <!-- flexContainer end -->
     </section> <!-- form end -->
 
 
-<!-- answer start -->
-<div class="answer">
-    <div class="flexContainer wrapper">
-        <div class="contentContainer">
-            <h2>Your Zelda Creature is:</h2>
-        </div>
-        <div class="cardContainer">
-            <div class="imgContainer">
-                <!-- <img src="./assets/48053.gif" alt=""> -->
+    <!-- answer start -->
+    <div class="answer">
+        <div class="flexContainer wrapper">
+            <div class="contentContainer">
+                <h2>Your Zelda Creature is:</h2>
             </div>
-            <div class="cardContentContainer">
-                <ul>
-                    <li class="name">
-                        <!-- <p>Creature Name</p> -->
-                    </li> <!-- name end -->
-                    <li class="location">
-                        <!-- <p>Location</p> -->
-                    </li> <!-- location end -->
-                    <li class="decription">
-                        <!-- <p>Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptas! Iste
+            <div class="cardContainer">
+                <div class="imgContainer">
+                    <img src="" alt="" class="image">
+                </div>
+                <div class="cardContentContainer">
+                    <ul>
+                        <li class="nameContainer">
+                            <p class="name">Creature Name</p>
+                        </li> <!-- name end -->
+                        <li class="locationContainer">
+                            <p class="location">Location</p>
+                        </li> <!-- location end -->
+                        <li class="decriptionContainer">
+                            <p class="description">Description: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam, voluptas! Iste
                             tenetur facilis perspiciatis! Adipisci modi exercitationem at dolores quod officia
-                            consectetur ex laboriosam delectus assumenda distinctio et, perferendis eaque?</p> -->
-                    </li> <!-- decription end -->
-                </ul>
-            </div> <!-- cardContentContainer end -->
+                            consectetur ex laboriosam delectus assumenda distinctio et, perferendis eaque?</p>
+                        </li> <!-- decription end -->
+                    </ul>
+                </div> <!-- cardContentContainer end -->
+            </div>
         </div>
-    </div>
-</div> <!-- answer end -->
+    </div> <!-- answer end -->
 
     <footer>
         <p>

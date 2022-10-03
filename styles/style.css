@@ -329,22 +329,15 @@ header .flexContainer {
 
 h1,
 h2,
-h3,
-button {
+h3 {
   margin-bottom: 4rem;
 }
 
+.question {
+  display: none;
+}
+
 .question .flexContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
 }
 .question .flexContainer .formContainer {
@@ -364,12 +357,19 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #EFC645;
   border: none;
   border-radius: 45px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   padding: 20px;
 }
 .question .flexContainer .formContainer form fieldset #creatureQuestion {
@@ -383,9 +383,14 @@ button {
           appearance: none;
   padding: 3%;
   color: #0B8142;
+  margin-bottom: 1rem;
 }
 .question .flexContainer .formContainer form fieldset #creatureQuestion:hover, .question .flexContainer .formContainer form fieldset #creatureQuestion:focus {
   border: 2px solid #0B8142;
+}
+
+.answer {
+  display: none;
 }
 
 .answer .flexContainer {
