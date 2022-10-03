@@ -3,7 +3,9 @@
 //question section
 .question{
   display:none;
+  margin-top: 2rem;
 } //hide question section when page loads 
+
 
 
 .question .flexContainer {
@@ -30,7 +32,7 @@
         align-items: center;
         justify-content: space-between;
   
-        background-color: $quinary;
+        background-color: $secondary;
         border: none;
         border-radius: 45px;
        
@@ -68,6 +70,17 @@
 
 }
 
+// showMe button style
+.showMe {
+  background-color: $quinary;
+  color: $secondary;
+  &:hover, 
+  &:focus {
+    background-color: $secondary;
+    color: $quinary;
+    border: 2px solid $quinary
+  }
+}
 
 
 // .answer section styles
@@ -76,22 +89,25 @@
   display:none;
 }   //hide answer section when page loads 
 
-
-
 .answer .flexContainer {
   display: flex;
   background-color: $secondary;
   flex-direction: column;
   flex-wrap: wrap;
   text-align: center;
+  border-radius: 25%;
 
   h2 {
     margin: 2rem 1rem 1rem 1rem;
+    background-color: inherit;
+    font-family: $silkscreen;
   }
 }
 
+
+
 .answer .cardContainer {
-  background-color: $tertiary;
+  // background-color: $tertiary;
   margin: 0 auto;
 
   .imgContainer {
@@ -105,8 +121,9 @@
   }
 
   .cardContentContainer {
-    background-color: $quaternary;
+    // background-color: $quaternary;
     padding: 2rem;
     text-align: center;
+    border-radius: 25%;
   }
 }
