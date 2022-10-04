@@ -1,7 +1,3 @@
-// TODO:
-// Errors are handled effectively - CATCH
-
-
 //Namespace for zeldaApp
 const zeldaApp = {};
 
