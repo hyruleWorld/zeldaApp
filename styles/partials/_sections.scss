@@ -1,10 +1,12 @@
 @use "variables" as *;
 
 //question section
-.question{
-  display:none;
+.question {
+  display: none;
   margin-top: 2rem;
-} //hide question section when page loads 
+}
+
+//hide question section when page loads 
 
 
 
@@ -27,7 +29,7 @@
 
 
       fieldset {
-        display: flex;  
+        display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
@@ -49,7 +51,7 @@
           padding: 3%;
           color: $primary;
           margin-bottom: 1rem;
-          
+
 
 
           &:hover,
@@ -72,7 +74,8 @@
 .showMe {
   background-color: $quinary;
   color: $secondary;
-  &:hover, 
+
+  &:hover,
   &:focus {
     background-color: $secondary;
     color: $quinary;
@@ -83,9 +86,11 @@
 
 // .answer section styles
 
-.answer{
-  display:none;
-}   //hide answer section when page loads 
+.answer {
+  display: none;
+}
+
+//hide answer section when page loads 
 
 .answer .flexContainer {
   display: flex;
@@ -100,6 +105,7 @@
     font-size: 2.25rem;
     font-weight: bold;
   }
+
   h2 {
     margin: 2rem 1rem 1rem 1rem;
     background-color: inherit;
@@ -111,24 +117,33 @@
 .answer .cardContainer {
   // background-color: $tertiary;
   margin: 0 auto;
+
   .imgContainer {
     overflow: hidden;
     padding: 1rem;
     max-width: 100vw;
+
     .img {
       width: 100%;
     }
+
     img {
       border: 5px solid #F3DEAA;
       border-radius: 50%;
     }
   }
-    .cardContentContainer {
-      color: $quinary;
-      padding: 0 5rem 0 5rem;
-      text-align: center;
-      .location::before {
+
+  .cardContentContainer {
+    color: $quinary;
+    padding: 0 5rem 0 5rem;
+    text-align: center;
+
+    .location::before {
+      content: '📍'
         // <i class="fa-solid fa-signs-post"></i>
-      }
     }
+    .description::before{
+      content:'👹'
+    }
+  }
 }
