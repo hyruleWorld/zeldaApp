@@ -241,6 +241,7 @@ a {
   cursor: pointer;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  color: #F3DEAA;
 }
 a:hover {
   color: #FFF;
@@ -339,6 +340,16 @@ header .flexContainer {
 
 .headingContainer {
   padding: 5rem 0;
+  position: relative;
+}
+.headingContainer .typerAnimation {
+  position: absolute;
+  top: 55%;
+}
+
+.startGameContainer {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 h1 {
@@ -480,6 +491,10 @@ h3 {
 
 footer p {
   text-align: center;
+  background-color: #203253;
+  margin-top: 8rem;
+  padding: 10px;
+  color: #F3DEAA;
 }
 
 /********BELOW 1000px*******/
@@ -498,5 +513,20 @@ footer p {
 @media (max-width: 680px) {
   html {
     font-size: 70%;
+  }
+}
+/********BELOW 500px*******/
+@media (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+  .headingContainer .typerAnimation {
+    top: 60%;
+  }
+}
+/********BELOW 415px*******/
+@media (max-width: 500px) {
+  html {
+    font-size: 45%;
   }
 }

@@ -1,27 +1,50 @@
 @use "variables" as *;
 
 /********BELOW 1000px*******/
-@media(max-width:1000px){
-    html {
-        font-size: 100%;
-      }
-      
+@media(max-width:1000px) {
+  html {
+    font-size: 100%;
+  }
+
 }
 
 /********BELOW 800px*******/
-@media(max-width:800px){
-    html {
-        font-size: 80%;
-      }
-      
+@media(max-width:800px) {
+  html {
+    font-size: 80%;
+  }
+
 }
 
 /********BELOW 680px*******/
-@media(max-width:680px){
-    html {
-        font-size: 70%;
-      }
-    //   #creatureQuestion{
-    //     background-size: 0rem;
-    //   } //delete animation 
+@media(max-width:680px) {
+  html {
+    font-size: 70%;
+  }
+
+  //   #creatureQuestion{
+  //     background-size: 0rem;
+  //   } //delete animation 
+}
+
+/********BELOW 500px*******/
+@media(max-width:500px) {
+  html {
+    font-size: 50%;
+  }
+
+  .headingContainer .typerAnimation {
+    top: 60%;
+  }
+}
+
+/********BELOW 415px*******/
+@media(max-width:500px) {
+  html {
+    font-size: 45%;
+  }
+
+  // .headingContainer .typerAnimation {
+  //   top: 60%;
+  // }
 }

@@ -14,6 +14,21 @@ header .flexContainer {
 
 .headingContainer {
   padding: 5rem 0;
+  position: relative;
+  
+
+  .typerAnimation{
+    position:absolute;
+    top:55%
+  }
+
+  // img{
+  //   margin-top: 50px;
+  // }
+}
+.startGameContainer{
+  margin-top: 4rem;
+  margin-bottom: 3rem;
 }
 
 // h1,
