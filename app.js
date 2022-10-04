@@ -1,3 +1,7 @@
+// TODO:
+// Errors are handled effectively - CATCH
+
+
 //Namespace for zeldaApp
 const zeldaApp = {};
 
@@ -9,15 +13,12 @@ zeldaApp.getInfo = () => {
     //AJAX request
 
     const appUrl = new URL(zeldaApp.url);
-    //  console.log(appUrl)
-
     //fetch data
     fetch(appUrl)
         .then((apiPromise) => {
             return apiPromise.json()
         })
         .then((data) => {
-            console.log(data)
             zeldaApp.displayCard(data)
         })
 }
@@ -48,7 +49,6 @@ zeldaApp.getOption = () => {
     formElement.addEventListener('submit', (e) => {
         // add in prevent default of default event on clicking "Show me" button
         e.preventDefault();
-        // console.log('abc')
 
         // create variable for selected value = const selectValue
         const selectValue = selectElement.value;
@@ -59,7 +59,6 @@ zeldaApp.getOption = () => {
         //     const selectValue = selectElement.value;
 
         // });
-        console.log(selectValue);
 
         if (selectValue == 'title') {
             alert('Please select your preference!')
@@ -77,13 +76,11 @@ zeldaApp.getOption = () => {
 
 
 zeldaApp.displayCard = (card) => {
-    console.log(card.data);
 
 
 
     zeldaApp.displayCard.helpGetSelectValue = {
         userOption: function (selectValue) {
-            console.log(selectValue)
 
             const imageTag = document.querySelector('.image')
             const nameTag = document.querySelector('.name');
@@ -96,11 +93,9 @@ zeldaApp.displayCard = (card) => {
             if (selectValue == 'food') {
                 // then random generate from food array (36 items) = food.length
                 const randomIndex = Math.floor(Math.random() * card.data.food.length);
-                console.log(randomIndex);
 
                 // Store randomly generator creature in a variable 
                 const creatureHero = card.data.food[randomIndex];
-                // console.log(creatureHero)
 
                 //Display card
                 nameTag.innerHTML = creatureHero.name;
@@ -116,11 +111,9 @@ zeldaApp.displayCard = (card) => {
             else if (selectValue == 'nonFood') {
                 //  then random generate from non_food array (47 items) = non_food.length
                 const randomIndex = Math.floor(Math.random() * card.data.non_food.length);
-                console.log(randomIndex);
 
                 // Store randomly generator creature in a variable 
                 const creatureHero = card.data.non_food[randomIndex];
-                // console.log(creatureHero)
 
                 //Display card
                 nameTag.innerHTML = creatureHero.name;
@@ -135,15 +128,12 @@ zeldaApp.displayCard = (card) => {
             else if (selectValue == 'whatever') {
                 //combine food and non_food into one array
                 card.data.whatever = card.data.food.concat(card.data.non_food)
-                console.log(card.data.whatever)
 
                 // then random generate from food or non-food array (36 index + 47 index) = combined.length
                 const randomIndex = Math.floor(Math.random() * card.data.whatever.length);
-                console.log(randomIndex)
 
                 // Store randomly generator creature in a variable 
                 const creatureHero = card.data.whatever[randomIndex];
-                // console.log(creatureHero)
 
                 //Display card
                 nameTag.innerHTML = creatureHero.name;
@@ -155,24 +145,8 @@ zeldaApp.displayCard = (card) => {
             }
         }
     }
-
-
 }
 
-// loop through food, non_food and the combination 
-// create 3 <p> tags inside cardContentContainer(ul>li>p) with separate class name: name, common_location and description;  and 1 <img> tag inside imgContainer with class name of image
-
-// Display card with:
-// Img: append a creatureHero.image to imgContainer
-// <img src ="" alt="name">
-// Name: append a creatureHero.name 
-// .name
-// Location 
-// append a creatureHero.common_locations
-// .location
-// description 
-// append a creatureHero.description
-// .description
 
 
 //init method
