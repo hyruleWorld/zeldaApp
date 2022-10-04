@@ -8,7 +8,7 @@ const zeldaApp = {};
 //URL
 zeldaApp.url = 'https://botw-compendium.herokuapp.com/api/v2/category/creatures';
 
-//creat a method to get data from URL
+//create a method to get data from URL
 zeldaApp.getInfo = () => {
     //AJAX request
 
@@ -20,8 +20,12 @@ zeldaApp.getInfo = () => {
         })
         .then((data) => {
             zeldaApp.displayCard(data)
-        })
-}
+        }).catch((error) => {
+            if (error.message === 'Not Found') {
+                alert('No creature found')
+            } else ('Something is broken')
+        });
+};
 
 
 //Change style visibility of question and answer sections-display:none
@@ -53,13 +57,6 @@ zeldaApp.getOption = () => {
         // create variable for selected value = const selectValue
         const selectValue = selectElement.value;
 
-
-        // selectElement.addEventListener('change', () => {
-
-        //     const selectValue = selectElement.value;
-
-        // });
-
         if (selectValue == 'title') {
             alert('Please select your preference!')
         }
@@ -67,17 +64,12 @@ zeldaApp.getOption = () => {
         else if (selectValue == 'food' || selectValue == 'nonFood' || selectValue == 'whatever') {
             answerSection.style.display = 'block'
         }
-
-
         zeldaApp.displayCard.helpGetSelectValue.userOption(selectValue)
-
     })
 }
 
 
 zeldaApp.displayCard = (card) => {
-
-
 
     zeldaApp.displayCard.helpGetSelectValue = {
         userOption: function (selectValue) {
@@ -103,8 +95,6 @@ zeldaApp.displayCard = (card) => {
                 descriptionTag.innerHTML = creatureHero.description;
                 imageTag.src = creatureHero.image;
                 imageTag.alt = creatureHero.name
-
-
             }
 
             // if user selects "non_food"
@@ -121,7 +111,6 @@ zeldaApp.displayCard = (card) => {
                 descriptionTag.innerHTML = creatureHero.description;
                 imageTag.src = creatureHero.image;
                 imageTag.alt = creatureHero.name
-
             }
 
             // if user selects "whatever"
@@ -148,13 +137,12 @@ zeldaApp.displayCard = (card) => {
 }
 
 
-
 //init method
 zeldaApp.init = () => {
     zeldaApp.getInfo();
     zeldaApp.getOption();
-
 }
+
 //call init
 zeldaApp.init()
 
