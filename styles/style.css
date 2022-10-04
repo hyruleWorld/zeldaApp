@@ -98,10 +98,6 @@ audio:not([controls]) {
   height: 0;
 }
 
-img {
-  border-style: none;
-}
-
 svg:not(:root) {
   overflow: hidden;
 }
@@ -249,12 +245,14 @@ a:focus {
 
 button {
   font-size: 1.5rem;
+  font-family: "Silkscreen", cursive;
   background-color: #F3DEAA;
   border: none;
   padding: 10px 20px;
   transition: 0.3s;
   cursor: pointer;
   border-radius: 20px;
+  color: #203253;
 }
 button:hover {
   background-color: #203253;
@@ -293,12 +291,12 @@ h1 {
 
 h2,
 h3 {
-  font-family: "Source Code Pro", monospace;
   color: #F3DEAA;
 }
 
 h2 {
   font-size: 2.25rem;
+  font-family: "Source Code Pro", monospace;
 }
 
 h3 {
@@ -306,7 +304,9 @@ h3 {
   font-size: 1.75rem;
 }
 
-p {
+p,
+h3,
+select {
   font-family: "Silkscreen", cursive;
 }
 
@@ -405,6 +405,11 @@ h3 {
   flex-wrap: wrap;
   text-align: center;
   border-radius: 25%;
+  border: 5px solid #F3DEAA;
+}
+.answer .flexContainer .name {
+  font-size: 2.25rem;
+  font-weight: bold;
 }
 .answer .flexContainer h2 {
   margin: 2rem 1rem 1rem 1rem;
@@ -423,12 +428,15 @@ h3 {
 .answer .cardContainer .imgContainer .img {
   width: 100%;
 }
-.answer .cardContainer .cardContentContainer {
-  padding: 2rem;
-  text-align: center;
-  border-radius: 25%;
+.answer .cardContainer .imgContainer img {
+  border: 5px solid #F3DEAA;
+  border-radius: 50%;
 }
-
+.answer .cardContainer .cardContentContainer {
+  color: #F3DEAA;
+  padding: 0 5rem 0 5rem;
+  text-align: center;
+}
 footer p {
   text-align: center;
 }

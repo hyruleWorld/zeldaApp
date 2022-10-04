@@ -18,7 +18,7 @@
   .formContainer {
     display: flex;
     justify-content: center;
-   
+
     margin-bottom: 20px;
 
     form {
@@ -31,11 +31,9 @@
         flex-direction: column;
         align-items: center;
         justify-content: space-between;
-  
         background-color: $secondary;
         border: none;
         border-radius: 45px;
-       
         padding: 20px;
 
         #creatureQuestion {
@@ -96,7 +94,12 @@
   flex-wrap: wrap;
   text-align: center;
   border-radius: 25%;
+  border: 5px solid $quinary;
 
+  .name {
+    font-size: 2.25rem;
+    font-weight: bold;
+  }
   h2 {
     margin: 2rem 1rem 1rem 1rem;
     background-color: inherit;
@@ -105,25 +108,27 @@
 }
 
 
-
 .answer .cardContainer {
   // background-color: $tertiary;
   margin: 0 auto;
-
   .imgContainer {
     overflow: hidden;
     padding: 1rem;
     max-width: 100vw;
-
     .img {
       width: 100%;
     }
+    img {
+      border: 5px solid #F3DEAA;
+      border-radius: 50%;
+    }
   }
-
-  .cardContentContainer {
-    // background-color: $quaternary;
-    padding: 2rem;
-    text-align: center;
-    border-radius: 25%;
-  }
+    .cardContentContainer {
+      color: $quinary;
+      padding: 0 5rem 0 5rem;
+      text-align: center;
+      .location::before {
+        // <i class="fa-solid fa-signs-post"></i>
+      }
+    }
 }
