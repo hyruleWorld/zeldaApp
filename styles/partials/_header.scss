@@ -1,7 +1,7 @@
 @use "variables" as *;
 
 header {
-  background: url("../assets/headerImg.jpeg") no-repeat top center/100vw; 
+  background: url("../assets/headerImg.jpeg") no-repeat top center/100vw;
 }
 
 header .flexContainer {
@@ -15,17 +15,27 @@ header .flexContainer {
 .headingContainer {
   padding: 5rem 0;
   position: relative;
-  
 
-  .typerAnimation{
-    position:absolute;
-    top:55%
+
+  .typerAnimation {
+    position: absolute;
+    top: 55%;
+
+
+
+    
   }
-
 }
-.startGameContainer{
+
+
+
+.startGameContainer {
   margin-top: 4rem;
   margin-bottom: 3rem;
+
+  .buttonContainer {
+    margin-top: 20px;
+  }
 }
 
 h1 {
@@ -41,4 +51,3 @@ h2 {
 h3 {
   margin-bottom: 1rem;
 }
-

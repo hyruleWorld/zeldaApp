@@ -2,7 +2,7 @@
 const zeldaApp = {};
 
 //URL
-zeldaApp.url = 'https://botw-compendium.herokuapp.com/api/v2/category/creatures';
+zeldaApp.url = 'https://botw-compendium.herokuapp.com/api/v2';
 
 //create a method to get data from URL
 zeldaApp.getInfo = () => {
@@ -21,6 +21,7 @@ zeldaApp.getInfo = () => {
                 alert('No creature found')
             } else ('Something is broken')
         });
+
 };
 
 
@@ -52,12 +53,13 @@ zeldaApp.getOption = () => {
 
         // create variable for selected value = const selectValue
         const selectValue = selectElement.value;
+       
 
         if (selectValue == 'title') {
             alert('Please select your preference!')
         }
         // // When users finish the question, click a button “Show me” then display answer section
-        else if (selectValue == 'food' || selectValue == 'nonFood' || selectValue == 'whatever') {
+        else if (selectValue == 'creatures' || selectValue == 'equipment' || selectValue == 'monsters' || selectValue == 'treasure') {
             answerSection.style.display = 'block'
         }
         zeldaApp.displayCard.helpGetSelectValue.userOption(selectValue)
@@ -66,7 +68,6 @@ zeldaApp.getOption = () => {
 
 
 zeldaApp.displayCard = (card) => {
-
     zeldaApp.displayCard.helpGetSelectValue = {
         userOption: function (selectValue) {
 
@@ -78,12 +79,16 @@ zeldaApp.displayCard = (card) => {
             // match selected value with object data's key name(food & non_food &combination of food & non_food)
 
             // if user selects "food"
-            if (selectValue == 'food') {
-                // then random generate from food array (36 items) = food.length
-                const randomIndex = Math.floor(Math.random() * card.data.food.length);
+            if (selectValue == 'creatures') {
+                //combine food and non_food in creatures category into one array
+                card.data.creature = card.data.creatures.food.concat(card.data.creatures.non_food);
+
+                // then random generate from food or non-food array (36 index + 47 index) = combined.length
+                const randomIndex = Math.floor(Math.random() * card.data.creature.length);
 
                 // Store randomly generator creature in a variable 
-                const creatureHero = card.data.food[randomIndex];
+                const creatureHero = card.data.creature[randomIndex];
+
 
                 //Display card
                 nameTag.innerHTML = creatureHero.name;
@@ -91,15 +96,16 @@ zeldaApp.displayCard = (card) => {
                 descriptionTag.innerHTML = creatureHero.description;
                 imageTag.src = creatureHero.image;
                 imageTag.alt = creatureHero.name
+
             }
 
             // if user selects "non_food"
-            else if (selectValue == 'nonFood') {
+            else if (selectValue == 'equipment') {
                 //  then random generate from non_food array (47 items) = non_food.length
-                const randomIndex = Math.floor(Math.random() * card.data.non_food.length);
+                const randomIndex = Math.floor(Math.random() * card.data.equipment.length);
 
                 // Store randomly generator creature in a variable 
-                const creatureHero = card.data.non_food[randomIndex];
+                const creatureHero = card.data.equipment[randomIndex];
 
                 //Display card
                 nameTag.innerHTML = creatureHero.name;
@@ -110,15 +116,12 @@ zeldaApp.displayCard = (card) => {
             }
 
             // if user selects "whatever"
-            else if (selectValue == 'whatever') {
-                //combine food and non_food into one array
-                card.data.whatever = card.data.food.concat(card.data.non_food)
-
-                // then random generate from food or non-food array (36 index + 47 index) = combined.length
-                const randomIndex = Math.floor(Math.random() * card.data.whatever.length);
+            else if (selectValue == 'monsters') {
+                //  then random generate from non_food array (47 items) = non_food.length
+                const randomIndex = Math.floor(Math.random() * card.data.monsters.length);
 
                 // Store randomly generator creature in a variable 
-                const creatureHero = card.data.whatever[randomIndex];
+                const creatureHero = card.data.monsters[randomIndex];
 
                 //Display card
                 nameTag.innerHTML = creatureHero.name;
@@ -126,7 +129,21 @@ zeldaApp.displayCard = (card) => {
                 descriptionTag.innerHTML = creatureHero.description;
                 imageTag.src = creatureHero.image;
                 imageTag.alt = creatureHero.name
+            }
 
+            else if (selectValue == 'treasure') {
+                //  then random generate from non_food array (47 items) = non_food.length
+                const randomIndex = Math.floor(Math.random() * card.data.treasure.length);
+
+                // Store randomly generator creature in a variable 
+                const creatureHero = card.data.treasure[randomIndex];
+
+                //Display card
+                nameTag.innerHTML = creatureHero.name;
+                locationTag.innerHTML = creatureHero.common_locations;
+                descriptionTag.innerHTML = creatureHero.description;
+                imageTag.src = creatureHero.image;
+                imageTag.alt = creatureHero.name
             }
         }
     }
